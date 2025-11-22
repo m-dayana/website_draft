@@ -23,5 +23,5 @@ Simply open `index.html` in a web browser to view the website locally.
 
 ## GitHub Pages
 
-This website is hosted on GitHub Pages and is available at: [Your GitHub Pages URL]
+This website is hosted on GitHub Pages and is available at: https://m-dayana.github.io/website_draft/
 
