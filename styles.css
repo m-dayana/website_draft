@@ -1,0 +1,324 @@
+/* Reset default browser styles for consistent appearance */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling - sets font and background color */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #ffffff; /* White text for readability on black background */
+    background-color: #000000; /* Black background matching logo */
+}
+
+/* Header styling - navigation bar at the top - using black from logo */
+header {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background for blur effect */
+    color: #FFCE1B; /* Bright yellow text matching logo */
+    padding: 2rem 4rem; /* Increased padding for bigger margins */
+    display: flex;
+    justify-content: space-between; /* Logo on left, navigation on right */
+    align-items: center;
+    position: sticky; /* Header stays visible when scrolling */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure header stays above other content */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow when sticky */
+    backdrop-filter: blur(15px); /* Blur effect for content behind header */
+    -webkit-backdrop-filter: blur(15px); /* Safari support for blur effect */
+}
+
+/* Container for logo and club name - displays them side by side */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Logo image styling - adjust size as needed */
+.logo {
+    height: 50px; /* Adjust this value to make logo bigger or smaller */
+    width: auto; /* Maintains aspect ratio */
+}
+
+/* Club name in header - bright yellow matching logo */
+header h1 {
+    font-size: 2rem;
+    margin: 0; /* Removes default margin */
+    color: #FFCE1B; /* Bright yellow from logo */
+}
+
+/* Navigation styling - right aligned in header */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem; /* Increased gap between navigation links for bigger margins */
+}
+
+/* Navigation links styling - bright yellow matching logo */
+nav a {
+    color: #FFCE1B; /* Bright yellow from logo */
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: all 0.3s;
+}
+
+/* Hover effect on navigation links - red accent */
+nav a:hover {
+    color: #dc2626; /* Red accent color on hover */
+    text-decoration: underline;
+}
+
+/* Main content area - adds spacing */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Hero section styling - prominent introduction section */
+.hero-section {
+    margin-bottom: 3rem;
+    background-color: transparent; /* No background - transparent */
+    padding: 4rem 2rem;
+    text-align: left; /* Left align content */
+}
+
+/* Hero title styling - large, prominent heading */
+.hero-title {
+    color: #FFCE1B; /* Bright yellow from logo */
+    font-size: 4.5rem; /* Increased size */
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+/* Typewriter cursor styling - blinking cursor effect */
+.cursor {
+    color: #FFCE1B; /* Same yellow as text */
+    animation: blink 1s infinite; /* Blinking animation */
+    margin-left: 2px; /* Small space after text */
+}
+
+/* Blinking animation for cursor */
+@keyframes blink {
+    0%, 50% {
+        opacity: 1; /* Visible */
+    }
+    51%, 100% {
+        opacity: 0; /* Invisible */
+    }
+}
+
+/* Hero text styling - descriptive text */
+.hero-text {
+    color: #cccccc; /* Light gray text for readability */
+    font-size: 1.3rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0; /* Left aligned, no auto margin */
+}
+
+/* Section styling - spacing between sections */
+.section {
+    margin-bottom: 3rem;
+    background-color: #1a1a1a; /* Dark gray background for sections on black */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Section headings - bright yellow matching logo */
+.section h2 {
+    color: #FFCE1B; /* Bright yellow from logo */
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    border-bottom: 3px solid #FFCE1B; /* Bright yellow underline from logo */
+    padding-bottom: 0.5rem;
+}
+
+/* About Us content styling */
+.about-content {
+    color: #cccccc; /* Light gray text for readability */
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* About Us paragraphs - spacing between paragraphs */
+.about-content p {
+    margin-bottom: 1.5rem;
+    color: #cccccc; /* Light gray text for readability */
+}
+
+/* Container for projects - grid layout */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Individual project card styling - yellow accent border matching logo */
+.project-card {
+    background-color: #2a2a2a; /* Dark gray background for cards */
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 4px solid #FFCE1B; /* Bright yellow border from logo */
+}
+
+/* Project card heading - bright yellow matching logo */
+.project-card h3 {
+    color: #FFCE1B; /* Bright yellow from logo */
+    margin-bottom: 0.5rem;
+}
+
+/* Project card description */
+.project-card p {
+    color: #cccccc; /* Light gray text for readability */
+}
+
+/* Container for team members - grid layout */
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Individual team member card styling - red accent border */
+.member-card {
+    background-color: #2a2a2a; /* Dark gray background for cards */
+    padding: 1.5rem;
+    border-radius: 6px;
+    text-align: center;
+    border-left: 4px solid #dc2626; /* Red accent color */
+}
+
+/* Avatar placeholder styling */
+.member-avatar {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Team member name - bright yellow matching logo */
+.member-card h3 {
+    color: #FFCE1B; /* Bright yellow from logo */
+    margin-bottom: 0.5rem;
+}
+
+/* Team member role */
+.member-card p {
+    color: #cccccc; /* Light gray text for readability */
+    font-size: 0.9rem;
+}
+
+/* Footer styling - bottom of page - black matching logo */
+footer {
+    background-color: #000000; /* Black background matching logo */
+    color: #FFCE1B; /* Bright yellow text matching logo */
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+
+/* Footer heading */
+footer h3 {
+    color: #FFCE1B; /* Bright yellow from logo */
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Container for contact information */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Individual contact item */
+.contact-item {
+    margin: 0.5rem 0;
+}
+
+/* Contact links styling */
+footer a {
+    color: #FFCE1B; /* Bright yellow from logo */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Hover effect on contact links */
+footer a:hover {
+    color: #dc2626; /* Red accent on hover */
+    text-decoration: underline;
+}
+
+/* Copyright text */
+.copyright {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive design - adjust layout for smaller screens */
+@media (max-width: 768px) {
+    /* Stack header elements vertically on mobile for better layout */
+    header {
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+    
+    /* Center logo container on mobile */
+    .logo-container {
+        justify-content: center;
+    }
+    
+    /* Adjust logo size for mobile if needed */
+    .logo {
+        height: 40px; /* Slightly smaller on mobile */
+    }
+    
+    /* Adjust navigation spacing on mobile */
+    nav {
+        justify-content: center; /* Center navigation on mobile */
+        gap: 1rem; /* Smaller gap on mobile */
+        flex-wrap: wrap; /* Allow navigation to wrap on very small screens */
+    }
+    
+    /* Reduce padding on mobile */
+    main {
+        padding: 1rem;
+    }
+    
+    /* Hero section responsive styling for mobile */
+    .hero-section {
+        padding: 2rem 1.5rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem; /* Smaller title on mobile */
+    }
+    
+    .hero-text {
+        font-size: 1.1rem; /* Smaller text on mobile */
+    }
+    
+    /* Single column layout for cards on mobile */
+    .projects-container,
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Footer contact section on mobile */
+    .contact-info {
+        gap: 0.75rem;
+    }
+    
+    footer {
+        padding: 1.5rem 1rem;
+    }
+}
+

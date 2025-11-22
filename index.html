@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BULAN Team</title>
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header section with team name and navigation -->
+    <header>
+        <!-- Logo image - replace 'logo.png' with your actual logo file name -->
+        <div class="logo-container">
+            <img src="images/logo.png" alt="BULAN Team Logo" class="logo">
+        </div>
+        <nav>
+            <!-- Simple navigation links to different sections -->
+            <a href="#about">About Us</a>
+            <a href="#projects">Projects</a>
+            <a href="#team">Team</a>
+        </nav>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <!-- Hero section - main introduction about the team -->
+        <section id="about" class="hero-section">
+            <h2 class="hero-title"><span id="typewriter-text"></span><span class="cursor">|</span></h2>
+            <p class="hero-text">
+                A student-led engineering team from 
+                <span style="color:#f42222">Nazarbayev University, Kazakhstan</span>, united by a passion for innovation in sustainable mobility
+            </p>
+        </section>
+
+        <!-- Projects section - displays team projects -->
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <!-- Individual project card -->
+                <div class="project-card">
+                    <h3>Project 1</h3>
+                    <p>Description of project 1. Add details about what this project involves.</p>
+                </div>
+                <!-- Another project card -->
+                <div class="project-card">
+                    <h3>Project 2</h3>
+                    <p>Description of project 2. Add details about what this project involves.</p>
+                </div>
+                <!-- Placeholder for additional projects -->
+                <div class="project-card">
+                    <h3>Project 3</h3>
+                    <p>Description of project 3. Add details about what this project involves.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team members section - displays team members -->
+        <section id="team" class="section">
+            <h2>Team Members</h2>
+            <div class="team-container">
+                <!-- Individual team member card -->
+                <div class="member-card">
+                    <div class="member-avatar">👤</div>
+                    <h3>Member Name</h3>
+                    <p>Role or position in the team</p>
+                </div>
+                <!-- Another team member card -->
+                <div class="member-card">
+                    <div class="member-avatar">👤</div>
+                    <h3>Member Name</h3>
+                    <p>Role or position in the team</p>
+                </div>
+                <!-- Placeholder for additional members -->
+                <div class="member-card">
+                    <div class="member-avatar">👤</div>
+                    <h3>Member Name</h3>
+                    <p>Role or position in the team</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with contact information -->
+    <footer>
+        <h3>Contact Us</h3>
+        <div class="contact-info">
+            <!-- Email contact -->
+            <div class="contact-item">
+                <strong>Email:</strong>
+                <a href="mailto:contact@bulanteam.com">contact@bulanteam.com</a>
+            </div>
+            <!-- Social media links - update with actual links -->
+            <div class="contact-item">
+                <strong>Follow us:</strong>
+                <a href="#" target="_blank">LinkedIn</a> |
+                <a href="#" target="_blank">Instagram</a> |
+                <a href="#" target="_blank">Twitter</a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2024 BULAN Team. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for typewriter effect on "Who are we?" -->
+    <script>
+        // Typewriter effect function - prints text letter by letter
+        function typeWriter(element, text, speed = 150) {
+            let i = 0;
+            element.textContent = ''; // Clear any existing text
+            
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed); // Wait before typing next character
+                } else {
+                    // Keep cursor visible for 1 second after typing is complete, then hide it
+                    setTimeout(function() {
+                        const cursor = document.querySelector('.cursor');
+                        if (cursor) {
+                            cursor.style.display = 'none';
+                        }
+                    }, 1000); // Wait 1 second (1000ms) before hiding cursor
+                }
+            }
+            
+            type(); // Start typing
+        }
+        
+        // Start typewriter effect when page loads
+        window.addEventListener('DOMContentLoaded', function() {
+            const typewriterElement = document.getElementById('typewriter-text');
+            const text = 'BULAN';
+            typeWriter(typewriterElement, text, 150); // 180ms delay between each letter (slower)
+        });
+    </script>
+</body>
+</html>
+
