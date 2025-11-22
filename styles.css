@@ -197,6 +197,18 @@ main {
 .member-avatar {
     font-size: 3rem;
     margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Member avatar image styling */
+.member-avatar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Maintain aspect ratio and fill the circle */
+    border: 3px solid #FFCE1B; /* Yellow border matching logo */
 }
 
 /* Team member name - bright yellow matching logo */
